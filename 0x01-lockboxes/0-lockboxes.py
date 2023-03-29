@@ -1,19 +1,16 @@
 #!/usr/bin/python3
+""" You have n number of locked boxes in front of you. Each box is numbered
+sequentially from 0 to n - 1 and each box may contain keys to the other boxes.
+"""
 
 
 def canUnlockAll(boxes):
-    """Unlock array of boxes of keys with indices"""
-    size = len(boxes)
-    checker = {}
-    index = 0
-
-    for keys in boxes:
-        if len(keys) == 0 or index == 0:
-            checker[index] = -1  # -1 means box is empty
-        for key in keys:
-                if key < size and key != index:
-                    checker[key] = key
-        if len(checker) == size:
-            return True
-        index += 1
-    return False
+    """ Write a method that determines if all the boxes can be opened.
+    @boxes is a list of lists
+    """
+    keys = [0]
+    for n in keys:
+        for key in boxes[n]:
+            if key not in keys and key < len(boxes):
+                keys.append(key)
+    return len(keys) == len(boxes)
