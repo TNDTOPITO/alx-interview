@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""N Queens"""
 import sys
 
 def nqueens(n):
@@ -24,6 +23,7 @@ def nqueens(n):
             row = ['.' for _ in range(n)]
             row[board[r]] = 'Q'
             print(' '.join(row))
+        print()
     
     if not n.isdigit():
         print('N must be a number')
