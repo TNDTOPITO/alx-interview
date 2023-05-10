@@ -1,11 +1,11 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """ Rotate 2D Matrix """
 
 
-def def rotate_2d_matrix(matrix):
+def rotate_2d_matrix(matrix):
     """ Given an n x n 2D matrix, rotate it 90 degrees clockwise. """
-    _len = len (matrix)
-    for now in range(int(_len/ 2)):
+    _len = len(matrix)
+    for row in range(int(_len / 2)):
         offset = 0
         i = _len - 1 - row
         for column in range(row, _len - 1 - row):
